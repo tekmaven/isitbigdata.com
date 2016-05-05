@@ -9,7 +9,7 @@ gulp.task('compile', function() {
 /**
  * Push build to gh-pages
  */
-gulp.task('deploy', function () {
+gulp.task('deploy', ['compile'], function () {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
 });
